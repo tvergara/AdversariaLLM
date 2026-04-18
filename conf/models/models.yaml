@@ -341,3 +341,24 @@ Qwen/Qwen3-4B:
   dtype: bfloat16
   chat_template: null
   trust_remote_code: True
+allenai/Olmo-3-7B-Instruct:
+  id: allenai/Olmo-3-7B-Instruct
+  tokenizer_id: allenai/Olmo-3-7B-Instruct
+  short_name: Olmo3
+  developer_name: AllenAI
+  compile: False
+  dtype: bfloat16
+  chat_template: null
+  trust_remote_code: True
+# Local-only: circuit-breaker SmolLM3 checkpoint on Mila scratch. Only usable
+# from the information-safety project on Mila; the short key avoids AdversariaLLM
+# treating the leading slash in `id` as a filesystem-rooted output prefix.
+smollm3-cb:
+  id: /network/scratch/b/brownet/information-safety/models/smollm3-circuit-breaker
+  tokenizer_id: /network/scratch/b/brownet/information-safety/models/smollm3-circuit-breaker
+  short_name: SmolLM3-RR
+  developer_name: HuggingFaceTB
+  compile: False
+  dtype: bfloat16
+  chat_template: null
+  trust_remote_code: True
