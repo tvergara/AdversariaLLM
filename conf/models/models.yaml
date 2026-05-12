@@ -362,3 +362,60 @@ smollm3-cb:
   dtype: bfloat16
   chat_template: null
   trust_remote_code: True
+# Tamia-only: 6 defense-trained Llama-3.1-8B-Instruct variants (3 WMDP + 3 EvilMath).
+# `id` points at the absolute SCRATCH path; tokenizer is the base Llama 3.1 8B Instruct
+# so AdversariaLLM doesn't try to load a tokenizer from the defense checkpoint dir.
+sft-wmdp-Llama-3.1-8B-Instruct-ec55867d84a0:
+  id: /scratch/t/tvergara/information-safety/defenses/sft-wmdp-Llama-3.1-8B-Instruct-ec55867d84a0
+  tokenizer_id: meta-llama/Llama-3.1-8B-Instruct
+  short_name: Llama
+  developer_name: sft-wmdp
+  compile: False
+  dtype: bfloat16
+  chat_template: llama-3-instruct
+  trust_remote_code: True
+cb-wmdp-Llama-3.1-8B-Instruct-bfbf3e38793c:
+  id: /scratch/t/tvergara/information-safety/defenses/cb-wmdp-Llama-3.1-8B-Instruct-bfbf3e38793c
+  tokenizer_id: meta-llama/Llama-3.1-8B-Instruct
+  short_name: Llama
+  developer_name: cb-wmdp
+  compile: False
+  dtype: bfloat16
+  chat_template: llama-3-instruct
+  trust_remote_code: True
+tar-wmdp-Llama-3.1-8B-Instruct-73d8c8e83c07:
+  id: /scratch/t/tvergara/information-safety/defenses/tar-wmdp-Llama-3.1-8B-Instruct-73d8c8e83c07
+  tokenizer_id: meta-llama/Llama-3.1-8B-Instruct
+  short_name: Llama
+  developer_name: tar-wmdp
+  compile: False
+  dtype: bfloat16
+  chat_template: llama-3-instruct
+  trust_remote_code: True
+sft-evilmath-Llama-3.1-8B-Instruct-d650794f965d:
+  id: /scratch/t/tvergara/information-safety/defenses/sft-evilmath-Llama-3.1-8B-Instruct-d650794f965d
+  tokenizer_id: meta-llama/Llama-3.1-8B-Instruct
+  short_name: Llama
+  developer_name: sft-evilmath
+  compile: False
+  dtype: bfloat16
+  chat_template: llama-3-instruct
+  trust_remote_code: True
+cb-evilmath-Llama-3.1-8B-Instruct-d7ba262bbc28:
+  id: /scratch/t/tvergara/information-safety/defenses/cb-evilmath-Llama-3.1-8B-Instruct-d7ba262bbc28
+  tokenizer_id: meta-llama/Llama-3.1-8B-Instruct
+  short_name: Llama
+  developer_name: cb-evilmath
+  compile: False
+  dtype: bfloat16
+  chat_template: llama-3-instruct
+  trust_remote_code: True
+tar-evilmath-Llama-3.1-8B-Instruct-09003ee4e852:
+  id: /scratch/t/tvergara/information-safety/defenses/tar-evilmath-Llama-3.1-8B-Instruct-09003ee4e852
+  tokenizer_id: meta-llama/Llama-3.1-8B-Instruct
+  short_name: Llama
+  developer_name: tar-evilmath
+  compile: False
+  dtype: bfloat16
+  chat_template: llama-3-instruct
+  trust_remote_code: True
