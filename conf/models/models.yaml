@@ -393,7 +393,7 @@ tar-wmdp-Llama-3.1-8B-Instruct-73d8c8e83c07:
   chat_template: llama-3-instruct
   trust_remote_code: True
 sft-evilmath-Llama-3.1-8B-Instruct-d650794f965d:
-  id: /scratch/t/tvergara/information-safety/defenses/sft-evilmath-Llama-3.1-8B-Instruct-d650794f965d
+  id: tvergara/sft-evilmath-Llama-3.1-8B-Instruct-d650794f965d
   tokenizer_id: meta-llama/Llama-3.1-8B-Instruct
   short_name: Llama
   developer_name: sft-evilmath
@@ -402,7 +402,7 @@ sft-evilmath-Llama-3.1-8B-Instruct-d650794f965d:
   chat_template: llama-3-instruct
   trust_remote_code: True
 cb-evilmath-Llama-3.1-8B-Instruct-d7ba262bbc28:
-  id: /scratch/t/tvergara/information-safety/defenses/cb-evilmath-Llama-3.1-8B-Instruct-d7ba262bbc28
+  id: tvergara/cb-evilmath-Llama-3.1-8B-Instruct-d7ba262bbc28
   tokenizer_id: meta-llama/Llama-3.1-8B-Instruct
   short_name: Llama
   developer_name: cb-evilmath
@@ -411,7 +411,7 @@ cb-evilmath-Llama-3.1-8B-Instruct-d7ba262bbc28:
   chat_template: llama-3-instruct
   trust_remote_code: True
 tar-evilmath-Llama-3.1-8B-Instruct-09003ee4e852:
-  id: /scratch/t/tvergara/information-safety/defenses/tar-evilmath-Llama-3.1-8B-Instruct-09003ee4e852
+  id: tvergara/tar-evilmath-Llama-3.1-8B-Instruct-09003ee4e852
   tokenizer_id: meta-llama/Llama-3.1-8B-Instruct
   short_name: Llama
   developer_name: tar-evilmath
