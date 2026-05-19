@@ -1,3 +1,4 @@
+import copy
 import os
 from datetime import datetime
 
@@ -73,9 +74,20 @@ def run_attacks(all_run_configs: list[RunConfig], cfg: DictConfig, date_time_str
             last_attack = run_config.attack
 
         attack: Attack[AttackResult] = Attack.from_name(run_config.attack)(run_config.attack_params)
-        results = attack.run(model, tokenizer, dataset)  # type: ignore
 
-        log_attack(run_config, results, cfg, date_time_string)
+        full_idx_list = list(run_config.dataset_params["idx"])
+        for behavior_pos, conversation in enumerate(dataset):
+            try:
+                single_result = attack.run(model, tokenizer, [conversation])  # type: ignore
+            except Exception as e:
+                logging.warning(
+                    f"Skipping behavior idx={full_idx_list[behavior_pos]} due to {type(e).__name__}: {e}"
+                )
+                continue
+            assert len(single_result.runs) == 1, "expected exactly one run per behavior"
+            partial_config = copy.deepcopy(run_config)
+            partial_config.dataset_params["idx"] = [full_idx_list[behavior_pos]]
+            log_attack(partial_config, single_result, cfg, date_time_string)
 
 
 @hydra.main(config_path="./conf", config_name="config", version_base="1.3")
